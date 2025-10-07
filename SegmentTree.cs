@@ -39,7 +39,7 @@ namespace ProblemSolving
         private void Initialize()
         {
             int treeSize = 1;
-            while (treeSize < 2 * (_boundMax - _boundMin + 1))
+            while (treeSize <= 2 * (_boundMax - _boundMin + 1))
             {
                 treeSize *= 2;
             }
