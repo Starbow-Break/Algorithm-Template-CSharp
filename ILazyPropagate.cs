@@ -1,3 +1,5 @@
+namespace ProblemSolving;
+
 public interface ILazyPropagate<TValue, TLazy>
 {
     public TLazy Default { get; }

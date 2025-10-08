@@ -1,3 +1,5 @@
+namespace ProblemSolving;
+
 /*
  * Interface of Monoid Algebraic Structure
  *
@@ -11,11 +13,9 @@
  * Author : STARBOW
  */
 
-namespace ProblemSolving
+
+public interface IMonoid<T>
 {
-    public interface IMonoid<T>
-    {
-        public T Identity { get; }
-        public IBinaryOperation<T> Operation { get; }
-    }
+    public T Identity { get; }
+    public IBinaryOperation<T> Operation { get; }
 }
