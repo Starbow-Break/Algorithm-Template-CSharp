@@ -15,7 +15,7 @@ public static class KMP
         {
             while (j > 0 && str[i] != str[j])
             {
-                j = fail[j];
+                j = fail[j - 1];
             }
 
             if (str[i] == str[j])
@@ -36,9 +36,9 @@ public static class KMP
         var fail = GetFail(target);
         for (int i = 0, j = 0; i < source.Length; i++)
         {
-            while (j > 0 && j < target.Length && source[i] != target[j])
+            while (j > 0 && source[i] != target[j])
             {
-                j = fail[j];
+                j = fail[j - 1];
             }
             
             if (source[i] == target[j])
@@ -46,6 +46,7 @@ public static class KMP
                 if (++j == fail.Length)
                 {
                     result.Add(i - fail.Length + 1);
+                    j = fail[j - 1];
                 }
             }
         }
