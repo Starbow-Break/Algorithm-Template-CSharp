@@ -1,4 +1,4 @@
-namespace ProblemSolving;
+namespace ProblemSolving.DataStructure;
 
 public interface ILazyPropagate<TValue, TLazy>
 {
